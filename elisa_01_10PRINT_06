@@ -1,0 +1,35 @@
+int w = 16; 
+int h = 16; 
+int index = 0;
+
+void setup() { 
+  size(640, 384); 
+  background(#0000ff); 
+  strokeWeight(3); 
+  stroke(224); 
+  smooth();
+}
+
+void draw() { 
+  int x1 = w*index;  // 16*0
+  int x2 = x1 + w;   // (16*0) + 16
+  int y1 = h*23;     // 16*23
+  int y2 = h*24;     // 16*24
+
+  if (random(2) < 1) { //disegna linee
+    line(x1, y1, x1, y1*2);  // 16, 16*23, 0, 16*24 (x-Sx, y-Sx, x-Dx, yDx)
+  } 
+  else { //disegna puntini
+    line(x1*2, y1, x1*2, y1);  // 0, 16*23, 16, 16*24 (x-Sx, y-Sx, x-Dx, yDx)
+  }
+
+// serve ad aumentare la righe e creare una scrittura continua
+
+  index++;                               // aumenta se
+  if (index == width/w) {                // index è uguale alla larghezza/16
+    PImage p = get(0, h, width, h*23);   // ridisegna lo sfondo
+    background(#0000ff); 
+    set(0, 0, p);                        // coordinate dello sfondo
+    index = 0;                           // indica il punto di partenza
+  } 
+}
