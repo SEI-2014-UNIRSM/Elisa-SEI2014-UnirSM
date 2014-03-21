@@ -1,7 +1,7 @@
 /* l'obbiettivo era creare uno strumento di disegno che creasse una scia di trangoli
 aventi per base le coordinate del mouse. Nel prossimo esercizio vorrei che i vertici
 che attualmente creo con un ramdom fossero congiunti da una linea che va a chiudere
-la forma creando una sorta di soffietto. Infine vorrei il segno fosse simmetrico.
+la forma creando una sorta di soffietto. Infine vorrei il segno fosse simmetrico.*/
 
 float x = 0, y = 0;
 float stepSize = 5.0;
