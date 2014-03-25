@@ -1,3 +1,5 @@
+// SCRITTO EX NOVO
+
 void setup() {
   size (600, 600);
 }
