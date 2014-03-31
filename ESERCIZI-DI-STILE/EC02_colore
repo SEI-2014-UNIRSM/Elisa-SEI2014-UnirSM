@@ -1,3 +1,5 @@
+/* The instrument reveals the shaded area below by moving the mouse */
+
 // SCRITTO EX NOVO
 
 void setup() {
