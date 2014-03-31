@@ -1,5 +1,8 @@
 // SCRITTO EX NOVO
 
+
+/* This design tool creates line */
+
 void setup() {
   size (600, 600);
 }
