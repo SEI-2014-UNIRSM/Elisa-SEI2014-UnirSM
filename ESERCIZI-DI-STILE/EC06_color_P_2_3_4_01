@@ -1,3 +1,6 @@
+/* The design tool creates a trail of concentric ellipses
+that increase the diameter as a function of speed of movement */
+
 /* 
 Basato su: P_2_3_4_01.pde
 
