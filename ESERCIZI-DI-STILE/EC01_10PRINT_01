@@ -4,6 +4,7 @@
 // Made for educational purposes, MIT License, March 2014, San Marino
 // —
 
+
 int w = 16; 
 int h = 16; 
 int index = 0;
