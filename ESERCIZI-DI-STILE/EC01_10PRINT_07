@@ -4,15 +4,6 @@
 // Made for educational purposes, MIT License, March 2014, San Marino
 // —
 
-/*
- * DRAWING A TAIL OF TRIANGLES
- *
- * MOUSE
- * drag                : drawing
- * release             : nothing
- *
- */
-
 
 int w = 16; 
 int h = 16; 
