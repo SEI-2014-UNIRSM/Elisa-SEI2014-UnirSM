@@ -1,3 +1,9 @@
+// BRUSH OF STARS
+// Elisa Canini for the course SEI2014 @ UnirSM
+// github.com/ElisaCanini — github.com/SEI2014-UnirSM/Elisa-SEI2014-UnirSM
+// Made for educational purposes, MIT License, March 2014, San Marino
+// —
+
 ArrayList <star> Planetario;
 
 void setup() {
