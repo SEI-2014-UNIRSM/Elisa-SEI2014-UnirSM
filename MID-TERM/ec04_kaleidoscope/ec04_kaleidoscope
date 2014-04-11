@@ -1,5 +1,10 @@
-/* OpenProcessing Tweak of *@*http://www.openprocessing.org/sketch/603*@* */
-/* !do not delete the line above, required for linking your tweak if you upload again */
+// KALEIDOSCOPE OF TRIANGLE AND CIRCLE
+// Elisa Canini for the course SEI2014 @ UnirSM
+// FROM: OpenProcessing Tweak of *@*http://www.openprocessing.org/sketch/603*@* 
+// github.com/ElisaCanini — github.com/SEI2014-UnirSM/Elisa-SEI2014-UnirSM
+// Made for educational purposes, MIT License, March 2014, San Marino
+// —
+
 
 float rot_off = 0.0; //coefficiente che determina l'inizio della rotazione
 float rot_increment = 0.005; //coefficiente che determina la velocità ri rotazione generale
