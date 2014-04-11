@@ -4,45 +4,71 @@
 // Made for educational purposes, MIT License, March 2014, San Marino
 // —
 
-ArrayList <star> Planetario;
+class star {
 
-void setup() {
-  size (600, 600);
-  colorMode(HSB, 360, 100, 100);
+  float x, y, r;
+  color c;
 
-  Planetario = new ArrayList();
+  int num;
+  float d; //sposta rispetto alla circonferenza
+  
+  float t;
+  float aplus; //incrementa l'angolo
+  
+  int eta;
+  
 
-  frameRate(24);
-}
+  star(float _x, float _y, float _r, color _c) {
+    x = _x;
+    y = _y;
+    r = _r;
+    c = _c;
 
-void draw() {
-  background (340, 100, 100);
-
-  for (int n=0; n<Planetario.size(); n++) {
-    star S = Planetario.get(n);
-    S.display();
-
-    if (S.eta > 24*5) {
-      Planetario.remove(n);
-    }
+    num = 24;
+    d = r/8;
+    
+    t = 0;
+    aplus = 0;
+    eta = 0;
   }
 
-  /*float L = map(mouseY, 0, height, 0, 60);
-  float H = map(mouseX, 0, width, 0, 100);*/
+  void display() {
+    //disegno circonferenza
+    fill (c,128);
+    noStroke();
+    //ellipse (x, y, r*2, r*2);
 
-  star nuova = new star(mouseX, mouseY, random(5, 12), color(360, 0, 100, 100));
-  //aggiungi al planetario
-  Planetario.add(nuova);
-}
-
-void mouseMoved() {
-  //crea una stella nel punto cliccato
-
-
-  /*float L = map(mouseY, 0, height, 0, 60);
-  float H = map(mouseX, 0, width, 0, 100);*/
-
-  star nuova = new star(mouseX, mouseY, random(5, 12), color(360, 0, 100, 80));
-  //aggiungi al planetario
-  Planetario.add(nuova);
+    //vertici
+    float a = TWO_PI / num;
+    
+    beginShape();
+    
+    for (int n=0; n<num; n++) {
+      
+      //circonferenza esterna
+      //la xP e la Yp dipendono da a (angolo) che dipende da num
+      //lo moltiplico per il raggio
+      // poi lo sommo a x e y perché i suoi valori andranno da -1 a 1
+      float dd = noise(t, n*10)*r/4;
+      
+      float xP = x + cos(a*n + aplus)*(r+d+dd);
+      float yP = y + sin(a*n + aplus)*(r+d+dd);
+      //ellipse (xP, yP, 5, 5);
+      vertex(xP, yP);
+      
+      //circonferenza interna
+      float xPi = x + cos(a*n+a/2 + aplus)*(r-d+dd);
+      float yPi = y + sin(a*n+a/2 + aplus)*(r-d+dd);
+      //ellipse (xPi, yPi, 5, 5);
+      vertex(xPi, yPi);
+    }
+    
+    endShape(CLOSE);
+    // t += 0.1; è la stessa cosa che ho scritto sotto
+    t = t+0.1;
+    aplus += 0.005;
+    
+    eta ++;
+    
+  }
 }
