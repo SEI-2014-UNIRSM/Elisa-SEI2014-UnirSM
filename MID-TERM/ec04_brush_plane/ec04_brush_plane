@@ -31,14 +31,14 @@ void draw() {
     star S = Planetario.get(n);
     S.display();
 
-    if (S.eta > 24*10) { //25 sec
+    if (S.eta > 24*10) { //10 sec
       Planetario.remove(n);
     }
   }
   
    count ++;
   
-  if(count<24){
+  if(count<24*10){ //definire il tempo di durata della registrazione
     //salva
     saveFrame ("fotogramma_####.jpeg");
   }
