@@ -1,4 +1,4 @@
-// DRAWING PLANE TAIL
+// DRAWING TRIANGLE TAIL
 // Elisa Canini for the course SEI2014 @ UnirSM  
 // github.com/ElisaCanini — github.com/SEI2014-UnirSM/Elisa-SEI2014-UnirSM
 // Made for educational purposes, MIT License, April 2014, San Marino
@@ -7,6 +7,7 @@
 ArrayList <star> Planetario;
 
 // Constants
+int count;
 int Y_AXIS = 1;
 color c1, c2;
 
@@ -20,26 +21,29 @@ void setup() {
   c2 = color(160, 203, 255);
 
   frameRate(24);
-}
+} // void setup()
 
 void draw() {
   // Background
   setGradient(0, 0, width, height, c1, c2, Y_AXIS); //se scrivi X_AXIS inverte
 
-  /*count ++;
-   if(count<24){
-   //salva
-   saveFrame ("fotogramma_####.jpeg");*/
-
   for (int n=0; n<Planetario.size(); n++) {
     star S = Planetario.get(n);
     S.display();
 
-    if (S.eta > 24*25) { //25 sec
+    if (S.eta > 24*10) { //25 sec
       Planetario.remove(n);
     }
   }
-}
+  
+   count ++;
+  
+  if(count<24){
+    //salva
+    saveFrame ("fotogramma_####.jpeg");
+  }
+  
+} // draw()
 
 void setGradient(int x, int y, float w, float h, color c1, color c2, int axis ) {
   // colora per linee, ogni linea cambia colore e forma il gradiente
@@ -53,7 +57,7 @@ void setGradient(int x, int y, float w, float h, color c1, color c2, int axis ) 
       line(x, i, x+w, i);
     }
   }
-}
+} // void setgradient()
 
 
 void mouseDragged() {
@@ -65,9 +69,10 @@ void mouseDragged() {
   star nuova = new star(mouseX, mouseY, random(3, 8), color(255, 255, 255, 100));
   //aggiungi al planetario
   Planetario.add(nuova);
-}
+  
+} // void mouseDragged()
 
 //esportare i fotogrammi in immagini (vedi framerate)
-/*void keyPressed () {
- saveFrame ("fotogramma_####.jpeg");
- }*/
+void keyPressed () {
+  saveFrame ("fotogramma_####.jpeg");
+} // void keyPressed()
