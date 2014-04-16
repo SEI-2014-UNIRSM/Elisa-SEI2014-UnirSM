@@ -36,12 +36,12 @@ void draw() {
     }
   }
   
-   count ++;
+   /*count ++;
   
   if(count<24*10){ //definire il tempo di durata della registrazione
     //salva
     saveFrame ("fotogramma_####.jpeg");
-  }
+  }*/
   
 } // draw()
 
@@ -73,6 +73,6 @@ void mouseDragged() {
 } // void mouseDragged()
 
 //esportare i fotogrammi in immagini (vedi framerate)
-void keyPressed () {
+/*void keyPressed () {
   saveFrame ("fotogramma_####.jpeg");
-} // void keyPressed()
+} // void keyPressed()*/
