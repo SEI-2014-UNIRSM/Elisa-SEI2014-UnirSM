@@ -1,7 +1,18 @@
-// SCRITTO EX NOVO
+// DRAWING A LINE
+// Elisa Canini for the course SEI2014 @ UnirSM  
+// github.com/ElisaCanini — github.com/SEI2014-UnirSM/Elisa-SEI2014-UnirSM
+// Made for educational purposes, MIT License, March 2014, San Marino
+// —
 
+/*
+ * DRAWING A LINE
+ *
+ * MOUSE
+ * drag                : drawing
+ * release             : nothing
+ *
+ */
 
-/* This design tool creates line */
 
 void setup() {
   size (600, 600);

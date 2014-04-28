@@ -1,7 +1,18 @@
-// SCRITTO EX NOVO
+// DRAWING TRIANGLE TAIL
+// Elisa Canini for the course SEI2014 @ UnirSM  
+// github.com/ElisaCanini — github.com/SEI2014-UnirSM/Elisa-SEI2014-UnirSM
+// Made for educational purposes, MIT License, March 2014, San Marino
+// —
 
-/* This design tool creates a trail of triangles that increase
-the bases in function of speed's movement */
+/*
+ * DRAWING A LINE
+ *
+ * MOUSE
+ * drag                : drawing
+ * release             : nothing
+ *
+ */
+
 
 float x = 0, y = 0;
 float stepSize = 5.0;
